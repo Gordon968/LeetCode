@@ -81,5 +81,25 @@ namespace LeetCode
                 Console.WriteLine(output);
             }
         }
+
+        public static void PrintArrays<T>(T[,]arrs)
+        {
+            int lengthI = arrs.GetLength(0);
+            int lengthJ = arrs.GetLength(1);
+            for(int i = 0; i < lengthI; i++)
+            {
+                string output = "[";
+                for(int j = 0; j < lengthJ; j++)
+                {
+                    output += arrs[i, j];
+                    if( j < lengthI - 1)
+                    {
+                        output += ",";
+                    }
+                }
+                output += "]";
+                Console.WriteLine(output);
+            }
+        }
     }
 }
